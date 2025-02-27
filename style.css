@@ -34,48 +34,7 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
-/* Center the project cards properly */
-@media screen and (max-width: 768px) {
-    .project-cards {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-    
-    .project-card {
-        max-width: 90%;
-        width: 100%;
-        text-align: center;
-        margin: 0 auto;
-    }
-}
 
-/* Center the contact card properly */
-@media screen and (max-width: 768px) {
-    .contact-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-    
-    .contact-info {
-        max-width: 90%;
-        width: 100%;
-        text-align: center;
-        margin: 0 auto;
-    }
-}
-
-/* Additional fix for smaller phones */
-@media screen and (max-width: 480px) {
-    .project-card, .contact-info {
-        margin: 0 auto;
-    }
-}
 
 
 /* Typography */
@@ -1210,5 +1169,65 @@ footer p {
     .tech-stack {
         flex-wrap: wrap;
         justify-content: center;
+    }
+}
+
+/* Fix for Project Cards Centering on Mobile */
+@media screen and (max-width: 768px) {
+    .project-cards {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 15px; /* Add padding to prevent overflow */
+    }
+    
+    .project-card {
+        max-width: 100%;
+        width: calc(100% - 30px); /* Subtract padding to prevent overflow */
+        margin: 0 0 2rem 0; /* Remove horizontal margins */
+        flex: none;
+    }
+    
+    /* Ensure container has proper width for mobile */
+    #featured-projects {
+        padding: 5rem 15px;
+    }
+}
+
+/* Fix for Contact Card Centering on Mobile */
+@media screen and (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .contact-info {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* Ensure contact section has proper padding */
+    .contact-section .container {
+        padding: 0 15px;
+    }
+}
+
+/* Additional fix for smaller phones */
+@media screen and (max-width: 480px) {
+    #featured-projects {
+        padding: 3rem 15px;
+    }
+    
+    .project-card {
+        width: 100%;
+        margin: 0 0 2rem 0;
+    }
+    
+    /* Ensure proper width for contact info on very small screens */
+    .contact-info {
+        padding: 1.5rem;
     }
 }
