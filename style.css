@@ -1125,109 +1125,98 @@ footer p {
 
 
 
+/* More specific fixes for project cards and contact info */
+
+/* Force project cards to center on mobile */
 @media screen and (max-width: 768px) {
-    /* Ensure project cards stack properly */
+    /* Reset all container and wrapper elements */
+    .container, 
+    #featured-projects, 
+    .contact-section, 
+    .contact-wrapper,
     .project-cards {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Reset project cards */
+    .project-card {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box;
+        float: none;
+        display: block;
+    }
+    
+    /* Reset contact info */
+    .contact-info,
+    .contact-item {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+    /* Center the contact icons and text */
+    .contact-item {
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        justify-content: center;
     }
     
-    .project-card {
-        max-width: 100%;
-        width: 100%;
-        margin-bottom: 2rem;
-        flex: none;
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
     }
     
-    /* Make project images responsive */
-    .project-img {
-        height: auto;
+    .contact-text {
+        text-align: center;
     }
     
+    /* Fix social links centering */
+    .social-links {
+        justify-content: center;
+    }
+    
+    /* Project image should maintain aspect ratio */
     .project-img img {
+        object-fit: cover;
+        width: 100%;
         height: auto;
-        max-height: 250px;
     }
     
-    /* Adjust padding for project content */
+    /* Center any fixed-width content */
     .project-info {
-        padding: 1.2rem;
-    }
-}
-
-/* Additional fix for smaller phones */
-@media screen and (max-width: 480px) {
-    #featured-projects {
-        padding: 3rem 1rem;
-    }
-    
-    .project-card {
-        margin: 0 1rem 2rem 1rem;
+        text-align: center;
     }
     
     .tech-stack {
-        flex-wrap: wrap;
         justify-content: center;
     }
 }
 
-/* Fix for Project Cards Centering on Mobile */
-@media screen and (max-width: 768px) {
-    .project-cards {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding: 0 15px; /* Add padding to prevent overflow */
-    }
-    
-    .project-card {
-        max-width: 100%;
-        width: calc(100% - 30px); /* Subtract padding to prevent overflow */
-        margin: 0 0 2rem 0; /* Remove horizontal margins */
-        flex: none;
-    }
-    
-    /* Ensure container has proper width for mobile */
-    #featured-projects {
-        padding: 5rem 15px;
-    }
-}
-
-/* Fix for Contact Card Centering on Mobile */
-@media screen and (max-width: 768px) {
-    .contact-wrapper {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding: 0;
-    }
-    
-    .contact-info {
-        width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-    }
-    
-    /* Ensure contact section has proper padding */
-    .contact-section .container {
-        padding: 0 15px;
-    }
-}
-
-/* Additional fix for smaller phones */
+/* Specific fix for very small screens */
 @media screen and (max-width: 480px) {
-    #featured-projects {
-        padding: 3rem 15px;
+    .container,
+    #featured-projects, 
+    .contact-section, 
+    .contact-wrapper,
+    .project-cards {
+        padding-left: 5px;
+        padding-right: 5px;
     }
     
-    .project-card {
-        width: 100%;
-        margin: 0 0 2rem 0;
-    }
-    
-    /* Ensure proper width for contact info on very small screens */
+    .project-card,
     .contact-info {
-        padding: 1.5rem;
+        width: 100% !important;
+        margin: 0 auto 20px auto !important;
     }
 }
