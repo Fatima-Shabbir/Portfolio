@@ -1180,7 +1180,7 @@ footer p {
     }
 }
 
-/* Additional fixes for very small screens */
+/* Additional fixes for small screens, including iPhone 13 */
 @media screen and (max-width: 480px) {
     .project-card {
         max-width: 95%;
@@ -1191,5 +1191,44 @@ footer p {
     .project-img {
         height: 180px !important;
         min-height: 180px !important;
+    }
+}
+
+/* iPhone 13 specific fixes - handles iPhone 12/13/14 models */
+@media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3),
+       screen and (min-device-width: 390px) and (max-device-width: 844px) and (-webkit-device-pixel-ratio: 3) {
+    .project-card {
+        max-width: 100% !important;
+        margin: 0 10px 30px 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+    }
+    
+    .project-img {
+        width: 100% !important;
+        height: 240px !important; /* Taller for iPhone 13 */
+        min-height: 240px !important;
+    }
+    
+    .project-info {
+        padding: 16px !important;
+        min-height: 220px !important;
+    }
+    
+    /* Ensure the text content doesn't get cut off */
+    .project-info p {
+        margin-bottom: 16px !important;
+    }
+    
+    /* Make sure tech stack is visible */
+    .tech-stack {
+        margin-bottom: 16px !important;
+    }
+    
+    /* Ensure the Live Demo button is visible */
+    .btn-small {
+        margin-top: 8px !important;
+        display: inline-block !important;
     }
 }
