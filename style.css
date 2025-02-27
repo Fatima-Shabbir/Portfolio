@@ -1232,3 +1232,160 @@ footer p {
         display: inline-block !important;
     }
 }
+
+/*new*/
+
+/* Fixed Overflow Issues */
+
+/* General fixes for overflow */
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Project section fixes */
+#featured-projects {
+    padding: 5rem 0;
+    background-color: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Contact section fixes */
+#contact-section, .contact-section {
+    padding: 5rem 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.contact-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact page specific mobile improvements */
+@media screen and (max-width: 768px) {
+    /* Improve contact page for mobile */
+    .contact-section {
+        padding: 3rem 0;
+    }
+    
+    .contact-wrapper {
+        padding: 0 15px;
+    }
+    
+    .contact-info {
+        padding: 1.5rem;
+        width: 100%;
+    }
+    
+    .contact-item {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 1.2rem;
+    }
+    
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        flex-shrink: 0;
+    }
+    
+    .contact-text {
+        word-break: break-word;
+    }
+    
+    .contact-social .social-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .social-link {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    /* Home page contact section mobile fixes */
+    #contact-section .contact-item {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto 1.5rem auto;
+    }
+    
+    /* Footer mobile improvements */
+    .footer-content {
+        padding: 0 15px;
+    }
+}
+
+/* Small screen fixes for project cards */
+@media screen and (max-width: 576px) {
+    .project-card {
+        flex: 1 1 100%;
+        max-width: 90%;
+        margin: 0 auto 2rem auto;
+    }
+    
+    .project-img {
+        height: auto !important;
+        max-height: 200px;
+    }
+    
+    .project-info {
+        padding: 1.2rem;
+    }
+    
+    .project-info p {
+        font-size: 0.95rem;
+    }
+    
+    .tech-stack {
+        flex-wrap: wrap;
+    }
+    
+    /* Fix skills section overflow */
+    #skills-preview .skills-container {
+        padding: 0 15px;
+    }
+}
+
+/* Extremely small screens, ensure no horizontal scroll */
+@media screen and (max-width: 360px) {
+    .container, 
+    .project-cards,
+    .contact-wrapper,
+    .skills-container {
+        padding: 0 10px;
+    }
+    
+    .project-card {
+        max-width: 95%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+    
+    .btn {
+        padding: 0.7rem 1.2rem;
+    }
+}
