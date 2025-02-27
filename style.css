@@ -1124,58 +1124,72 @@ footer p {
 }
 
 
-/* Improve project cards responsiveness for mobile */
+/* Force images to display properly on mobile */
 @media screen and (max-width: 768px) {
+    /* More explicit styling to fix project cards on mobile */
     .project-cards {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        max-width: 100%;
     }
 
     .project-card {
         max-width: 90%;
         width: 100%;
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
         height: auto;
+        display: block !important;
+        overflow: visible !important;
     }
 
+    /* Fix image display issues */
     .project-img {
-        width: 100%;
-        height: 200px; /* Fixed height for image container */
+        display: block !important;
+        width: 100% !important;
+        height: 220px !important; /* Slightly taller fixed height */
+        min-height: 220px !important;
+        overflow: hidden !important;
     }
 
     .project-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* This ensures the image covers the area without distortion */
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        max-width: none !important;
     }
 
+    /* Fix project info height */
     .project-info {
         padding: 1.2rem;
-        height: auto;
+        height: auto !important;
+        min-height: 200px;
     }
 
-    .project-info h3 {
-        font-size: 1.3rem;
-    }
-
-    .project-info p {
-        font-size: 0.95rem;
+    /* Fix animation issues on mobile */
+    .fade-in, .slide-in-right, .slide-in-left {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
     }
     
-    .tech-stack {
-        flex-wrap: wrap;
-        justify-content: flex-start;
+    /* Fix other potential issues */
+    .delay-1, .delay-2, .delay-3 {
+        animation-delay: 0s !important;
     }
 }
 
-/* Further improvements for very small screens */
+/* Additional fixes for very small screens */
 @media screen and (max-width: 480px) {
     .project-card {
-        max-width: 100%;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    #featured-projects {
-        padding: 3rem 1rem;
+    .project-img {
+        height: 180px !important;
+        min-height: 180px !important;
     }
 }
