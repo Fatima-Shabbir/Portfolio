@@ -1122,3 +1122,60 @@ footer p {
         max-width: 200px;
     }
 }
+
+
+/* Improve project cards responsiveness for mobile */
+@media screen and (max-width: 768px) {
+    .project-cards {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .project-card {
+        max-width: 90%;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .project-img {
+        height: auto;
+    }
+
+    .project-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-info {
+        padding: 1.2rem;
+    }
+
+    .project-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-info p {
+        font-size: 0.95rem;
+    }
+
+    .tech-stack {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+/* Further improvements for very small screens */
+@media screen and (max-width: 480px) {
+    .project-card {
+        max-width: 100%;
+    }
+
+    #featured-projects {
+        padding: 3rem 1rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+}
