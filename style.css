@@ -402,6 +402,421 @@ p {
     font-size: 0.8rem;
     font-weight: 600;
 }
+/* =========================================
+   CERTIFICATES SECTION
+========================================= */
+
+#certificates-section {
+    padding: 5rem 0;
+    background-color: var(--light-bg);
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Section Container */
+
+.certificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+/* =========================================
+   CERTIFICATE CARD
+========================================= */
+
+.certificate-card {
+    flex: 1 1 350px;
+    max-width: 450px;
+
+    background: white;
+
+    border-radius: var(--border-radius);
+
+    padding: 2rem;
+
+    box-shadow: var(--box-shadow);
+
+    text-align: center;
+
+    transition: var(--transition);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Top Gradient Line */
+
+.certificate-card::before {
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: var(--gradient-primary);
+}
+
+
+/* Hover Effect */
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   CERTIFICATE ICON
+========================================= */
+
+.certificate-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 1.5rem;
+
+    border-radius: 50%;
+
+    background: var(--gradient-primary);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+
+    box-shadow: 0 8px 20px rgba(74, 107, 255, 0.2);
+
+    transition: var(--transition);
+}
+
+
+.certificate-card:hover .certificate-icon {
+    transform: scale(1.08) rotate(3deg);
+}
+
+
+/* =========================================
+   CERTIFICATE TITLE
+========================================= */
+
+.certificate-info h3 {
+    font-size: 1.4rem;
+
+    margin-bottom: 1rem;
+
+    color: var(--text-color);
+
+    transition: var(--transition);
+}
+
+
+.certificate-card:hover .certificate-info h3 {
+    color: var(--primary-color);
+}
+
+
+/* =========================================
+   CERTIFICATE DATE
+========================================= */
+
+.certificate-date {
+    color: var(--grey-text);
+
+    font-size: 0.9rem;
+
+    margin-bottom: 1rem;
+}
+
+
+.certificate-date i {
+    color: var(--primary-color);
+
+    margin-right: 6px;
+}
+
+
+/* =========================================
+   CERTIFICATE DESCRIPTION
+========================================= */
+
+.certificate-info > p {
+    color: var(--grey-text);
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 1rem;
+}
+
+
+/* =========================================
+   CERTIFICATE CODE
+========================================= */
+
+.certificate-code {
+    font-size: 0.85rem !important;
+
+    color: var(--grey-text);
+
+    margin-bottom: 1.5rem !important;
+}
+
+
+.certificate-code strong {
+    color: var(--text-color);
+}
+
+
+/* =========================================
+   VIEW CERTIFICATE BUTTON
+========================================= */
+
+.certificate-card .btn {
+    margin-top: 0.5rem;
+}
+
+
+/* Button Icon */
+
+.certificate-card .btn i {
+    margin-right: 6px;
+}
+
+
+/* =========================================
+   CERTIFICATE BUTTON HOVER
+========================================= */
+
+.certificate-card .btn-small {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   CERTIFICATE ANIMATION
+========================================= */
+
+.certificate-card.fade-in {
+    opacity: 0;
+
+    animation: fadeIn 1s forwards;
+}
+
+
+/* =========================================
+   CERTIFICATE DELAYS
+========================================= */
+
+.certificate-card.delay-1 {
+    animation-delay: 0.3s;
+}
+
+
+.certificate-card.delay-2 {
+    animation-delay: 0.6s;
+}
+
+
+.certificate-card.delay-3 {
+    animation-delay: 0.9s;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 992px) {
+
+    #certificates-section {
+        padding: 4rem 0;
+    }
+
+    .certificates-container {
+        gap: 1.5rem;
+    }
+
+    .certificate-card {
+        flex: 1 1 320px;
+
+        max-width: 420px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    #certificates-section {
+        padding: 4rem 0;
+    }
+
+    .certificates-container {
+        flex-direction: column;
+
+        align-items: center;
+
+        width: 100%;
+
+        padding: 0 15px;
+    }
+
+
+    .certificate-card {
+        width: 100%;
+
+        max-width: 90%;
+
+        flex: none;
+
+        padding: 1.8rem;
+    }
+
+
+    .certificate-icon {
+        width: 70px;
+        height: 70px;
+
+        font-size: 1.8rem;
+    }
+
+
+    .certificate-info h3 {
+        font-size: 1.3rem;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 576px) {
+
+    #certificates-section {
+        padding: 3.5rem 0;
+    }
+
+
+    .certificates-container {
+        padding: 0 10px;
+    }
+
+
+    .certificate-card {
+        max-width: 95%;
+
+        padding: 1.5rem;
+    }
+
+
+    .certificate-icon {
+        width: 65px;
+        height: 65px;
+
+        font-size: 1.6rem;
+
+        margin-bottom: 1.2rem;
+    }
+
+
+    .certificate-info h3 {
+        font-size: 1.2rem;
+
+        line-height: 1.4;
+    }
+
+
+    .certificate-info > p {
+        font-size: 0.9rem;
+    }
+
+
+    .certificate-date {
+        font-size: 0.85rem;
+    }
+
+
+    .certificate-code {
+        font-size: 0.8rem !important;
+    }
+
+
+    .certificate-card .btn-small {
+        width: 100%;
+
+        padding: 0.7rem 1rem;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 360px) {
+
+    .certificate-card {
+        max-width: 100%;
+
+        padding: 1.3rem;
+    }
+
+
+    .certificate-icon {
+        width: 60px;
+        height: 60px;
+
+        font-size: 1.5rem;
+    }
+
+
+    .certificate-info h3 {
+        font-size: 1.1rem;
+    }
+
+
+    .certificate-info > p {
+        font-size: 0.85rem;
+
+        line-height: 1.6;
+    }
+
+}
 
 /* Skills Preview */
 #skills-preview {
